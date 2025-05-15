@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - УКВЗ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="УКВЗ">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="products.html">Продукция</a></li>
+                    <li class="active"><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="news-hero">
+            <div class="container">
+                <h1>Новости компании</h1>
+                <p>Следите за нашими последними событиями и достижениями</p>
+            </div>
+        </section>
+
+        <section class="news-list">
+            <div class="container">
+                <div class="news-filters">
+                    <button class="filter-btn active">Все новости</button>
+                    <button class="filter-btn">События</button>
+                    <button class="filter-btn">Производство</button>
+                    <button class="filter-btn">Награды</button>
+                </div>
+
+                <div class="news-articles">
+                    <article class="news-article">
+                        <img src="images/news1.jpg" alt="Выставка транспорта">
+                        <div class="article-content">
+                            <span class="news-date">15.10.2023</span>
+                            <h3>УКВЗ на международной выставке транспорта</h3>
+                            <p>Компания УКВЗ представила свои новейшие разработки на международной выставке железнодорожного транспорта в Москве.</p>
+                            <a href="news-single.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <img src="images/news2.jpg" alt="Новая модель">
+                        <div class="article-content">
+                            <span class="news-date">10.10.2023</span>
+                            <h3>Запуск новой модели грузового вагона</h3>
+                            <p>Усть-Катавский вагоностроительный завод начал серийное производство новой модели грузового вагона с улучшенными характеристиками.</p>
+                            <a href="news-single.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <img src="images/news3.jpg" alt="Экологическая инициатива">
+                        <div class="article-content">
+                            <span class="news-date">28.09.2023</span>
+                            <h3>Экологическая инициатива УКВЗ</h3>
+                            <p>Завод внедряет новые экологически чистые технологии производства, снижая воздействие на окружающую среду.</p>
+                            <a href="news-single.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <img src="images/news4.jpeg" alt="Юбилей сотрудника">
+                        <div class="article-content">
+                            <span class="news-date">15.09.2023</span>
+                            <h3>40 лет на УКВЗ</h3>
+                            <p>Сотрудник завода Петров И.И. отметил 40-летний юбилей работы на предприятии.</p>
+                            <a href="news-single.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="news-article">
+                        <img src="images/news5.jpg" alt="Спортивное мероприятие">
+                        <div class="article-content">
+                            <span class="news-date">05.09.2023</span>
+                            <h3>Спартакиада работников УКВЗ</h3>
+                            <p>На стадионе "Центральный" прошла ежегодная спартакиада среди работников завода.</p>
+                            <a href="news-single.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn next">→</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>© 2023 УКВЗ. Все права защищены.</p>
+                <p>456040, Челябинская обл., г. Усть-Катав, ул. Белинского, 1</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Фильтрация новостей
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Здесь можно добавить логику фильтрации
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #003366;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
+
+/* Планшеты */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+/* Адаптив для страницы "О компании" */
+@media (max-width: 768px) {
+    .production-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .production-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .managers {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Адаптив для страницы контактов */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 0 15px;
+    }
+}
+
+/* Адаптив для страницы новостей */
+@media (max-width: 768px) {
+    .news-filters {
+        justify-content: center;
+    }
+    
+    .news-articles {
+        grid-template-columns: 1fr;
+    }
+}

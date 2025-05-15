@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - УКВЗ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="УКВЗ">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="products.html">Продукция</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li class="active"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacts-hero">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами удобным для вас способом</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <h3>Адрес</h3>
+                        <p>456040, Россия, Челябинская область,<br>г. Усть-Катав, ул. Белинского, 1</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Телефоны</h3>
+                        <p>+7 (35167) 2-10-10 (приемная)<br>
+                        +7 (35167) 2-10-20 (отдел продаж)</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Электронная почта</h3>
+                        <p>info@ukvz.ru<br>sales@ukvz.ru</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <h2>Форма обратной связи</h2>
+                <form class="contact-form" id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Как нас найти</h2>
+                <div class="map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890abcdef&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>© 2023 УКВЗ. Все права защищены.</p>
+                <p>456040, Челябинская обл., г. Усть-Катав, ул. Белинского, 1</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Обработка формы обратной связи
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

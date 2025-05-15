@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продукции - УКВЗ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="УКВЗ">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li class="active"><a href="products.html">Каталог</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-hero">
+            <div class="container">
+                <h1>Каталог продукции</h1>
+                <p>Широкий ассортимент вагонов и спецтехники</p>
+            </div>
+        </section>
+
+        <section class="product-catalog">
+            <div class="container">
+                <div class="catalog-container">
+                    <!-- Фильтры -->
+                    <aside class="catalog-filters">
+                        <div class="filter-section">
+                            <h3>Категории</h3>
+                            <ul class="category-list">
+                                <li class="active"><a href="#" data-category="all">Все продукты</a></li>
+                                <li><a href="#" data-category="freight">Грузовые вагоны</a></li>
+                                <li><a href="#" data-category="passenger">Пассажирские вагоны</a></li>
+                                <li><a href="#" data-category="special">Специальная техника</a></li>
+                                <li><a href="#" data-category="components">Комплектующие</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>Фильтры</h3>
+                            <div class="filter-group">
+                                <label>Год выпуска</label>
+                                <select id="year-filter">
+                                    <option value="all">Все годы</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Грузоподъемность (т)</label>
+                                <div class="range-slider">
+                                    <input type="range" min="10" max="100" value="50" class="slider" id="capacity-range">
+                                    <span id="capacity-value">50</span>
+                                </div>
+                            </div>
+
+                            <button class="reset-filters">Сбросить фильтры</button>
+                        </div>
+                    </aside>
+
+                    <!-- Основной контент каталога -->
+                    <div class="catalog-content">
+                        <div class="search-sort">
+                            <div class="search-box">
+                                <input type="text" placeholder="Поиск по каталогу...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="sort-options">
+                                <label>Сортировка:</label>
+                                <select id="sort-by">
+                                    <option value="default">По умолчанию</option>
+                                    <option value="price-asc">Цена (по возрастанию)</option>
+                                    <option value="price-desc">Цена (по убыванию)</option>
+                                    <option value="name-asc">Название (А-Я)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="product-grid">
+                            <!-- Продукты будут загружаться через JS -->
+                        </div>
+
+                        <div class="pagination">
+                            <a href="#" class="page-nav disabled"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="page-number active">1</a>
+                            <a href="#" class="page-number">2</a>
+                            <a href="#" class="page-number">3</a>
+                            <a href="#" class="page-nav"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно для деталей продукта -->
+        <div class="product-modal" id="productModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <!-- Контент будет заполняться через JS -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>© 2023 УКВЗ. Все права защищены.</p>
+                <p>456040, Челябинская обл., г. Усть-Катав, ул. Белинского, 1</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
